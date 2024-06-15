@@ -80,8 +80,8 @@ const Header = () => {
       >
         <Image src={Logo} alt="Cypress Logo" width={50} height={50} />
         <span
-          className="font-semibold
-          dark:text-white
+          className="font-medium
+          dark:text-grey-300 dark:opacity-70 text-lg 
         "
         >
           OmniNote
