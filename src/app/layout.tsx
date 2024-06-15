@@ -1,8 +1,13 @@
+export const dynamic = "force-dynamic";
+
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
-import db from "@/lib/supabase/db";
-import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeProvider } from "@/lib/providers/theme-provider";
+import { AppStateProvider } from "@/lib/providers/state-provider";
+import { Toaster } from "@/components/ui/toaster";
+import { SupabaseUserProvider } from "@/lib/providers/SupabaseUserProvider";
+import { SocketProvider } from "@/lib/providers/SocketIoProviders";
 
 const inter = DM_Sans({ subsets: ["latin"] });
 
@@ -25,7 +30,14 @@ export default function RootLayout({
           disableTransitionOnChange
           enableSystem
         >
-          {children}
+          <AppStateProvider>
+            <SupabaseUserProvider>
+              <SocketProvider>
+                {children}
+                <Toaster />
+              </SocketProvider>
+            </SupabaseUserProvider>
+          </AppStateProvider>
         </ThemeProvider>
       </body>
     </html>

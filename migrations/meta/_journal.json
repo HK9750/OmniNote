@@ -15,6 +15,13 @@
       "when": 1714500452334,
       "tag": "0001_slow_taskmaster",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1716918260204,
+      "tag": "0002_white_newton_destine",
+      "breakpoints": true
     }
   ]
 }
