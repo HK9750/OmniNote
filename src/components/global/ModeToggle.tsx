@@ -11,7 +11,7 @@ const ModeToggle = () => {
       variant={"outline"}
       size="icon"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="text-muted-foreground bg-transparent bordeer-none"
+      className="text-muted-foreground bg-transparent border-none"
     >
       <Sun
         className="h-[1.2rem] 
