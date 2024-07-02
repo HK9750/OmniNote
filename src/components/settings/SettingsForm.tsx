@@ -220,7 +220,6 @@ const SettingsForm = () => {
           accept="image/*"
           placeholder="Workspace Logo"
           onChange={onChangeWorkspaceLogo}
-          disabled={uploadingLogo || subscription?.status !== "active"}
         />
         {subscription?.status !== "active" && (
           <small className="text-muted-foreground">
